@@ -89,13 +89,6 @@ export function ContactSection() {
 
           {/* CTA Button */}
           <div className="animate-fade-in-up">
-            <Button
-              size="lg"
-              className="elegant-shadow hover:shadow-lg transition-all duration-300 text-lg px-8 py-6"
-              onClick={() => window.location.href = 'mailto:hola@ivangomezaparicio.com'}
-            >
-              Iniciar Conversación
-            </Button>
           </div>
         </div>
       </div>

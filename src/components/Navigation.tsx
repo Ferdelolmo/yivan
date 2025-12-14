@@ -3,6 +3,19 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { useNavigate, useLocation } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const languages = {
+  es: { label: 'Español', flag: '🇪🇸' },
+  en: { label: 'English', flag: '🇬🇧' },
+  fr: { label: 'Français', flag: '🇫🇷' },
+  ru: { label: 'Русский', flag: '🇷🇺' }
+};
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,19 +90,27 @@ export function Navigation() {
             ))}
 
             {/* Language Toggle */}
-            <div className="flex items-center space-x-2">
-              <Globe className="h-4 w-4 text-muted-foreground" />
-              <select
-                value={language}
-                onChange={(e) => setLanguage(e.target.value as 'es' | 'en' | 'fr' | 'ru')}
-                className="bg-transparent border border-border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-              >
-                <option value="es">ES</option>
-                <option value="en">EN</option>
-                <option value="fr">FR</option>
-                <option value="ru">RU</option>
-              </select>
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="w-10 h-10 rounded-full hover:bg-accent">
+                  <span className="text-xl leading-none">
+                    {languages[language as keyof typeof languages]?.flag || '🌐'}
+                  </span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {Object.entries(languages).map(([code, { label, flag }]) => (
+                  <DropdownMenuItem
+                    key={code}
+                    onClick={() => setLanguage(code as 'es' | 'en' | 'fr' | 'ru')}
+                    className="cursor-pointer"
+                  >
+                    <span className="mr-2 text-lg">{flag}</span>
+                    {label}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,18 +137,21 @@ export function Navigation() {
                   {t(item.key)}
                 </button>
               ))}
-              <div className="flex items-center px-3 py-2 space-x-2">
-                <Globe className="h-4 w-4 text-muted-foreground" />
-                <select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value as 'es' | 'en' | 'fr' | 'ru')}
-                  className="bg-transparent border border-border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="es">Español</option>
-                  <option value="en">English</option>
-                  <option value="fr">Français</option>
-                  <option value="ru">Русский</option>
-                </select>
+              <div className="flex items-center px-4 py-3 gap-4 border-t border-border mt-2">
+                {Object.entries(languages).map(([code, { label, flag }]) => (
+                  <button
+                    key={code}
+                    onClick={() => {
+                      setLanguage(code as 'es' | 'en' | 'fr' | 'ru');
+                      setIsOpen(false);
+                    }}
+                    className={`text-2xl p-2 rounded-md transition-all hover:scale-110 active:scale-95 ${language === code ? 'bg-primary/10 ring-1 ring-primary/20' : 'grayscale opacity-70 hover:grayscale-0 hover:opacity-100'
+                      }`}
+                    title={label}
+                  >
+                    {flag}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
