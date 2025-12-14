@@ -1,6 +1,6 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent } from '@/components/ui/card';
-import { Instagram } from 'lucide-react';
+import { Instagram, MapPin } from 'lucide-react';
 
 export function WorkshopSection() {
     const { t } = useLanguage();
@@ -44,6 +44,25 @@ export function WorkshopSection() {
                                     </p>
                                 </CardContent>
                             </Card>
+
+                            <a
+                                href="https://maps.app.goo.gl/CPtZmDufAeCeJiEp7"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block group/address"
+                            >
+                                <Card className="subtle-shadow group-hover/address:elegant-shadow transition-all duration-300 bg-card/50 backdrop-blur-sm border-l-4 border-l-primary/50">
+                                    <CardContent className="p-6 flex items-center gap-4">
+                                        <div className="p-3 bg-primary/10 rounded-full group-hover/address:bg-primary/20 transition-colors">
+                                            <MapPin className="w-6 h-6 text-primary" />
+                                        </div>
+                                        <div>
+                                            <p className="font-medium text-foreground">36 C. Fuente Grande</p>
+                                            <p className="text-muted-foreground">Altamiros, Castile and León</p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </a>
                         </div>
                     </div>
 
