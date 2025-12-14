@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Warm, earthy palette inspired by sculpture materials */
+    --background: 35 15% 96%;
+    --foreground: 25 20% 15%;
+
+    --card: 35 25% 98%;
+    --card-foreground: 25 20% 15%;
+
+    --popover: 35 25% 98%;
+    --popover-foreground: 25 20% 15%;
+
+    /* Rich bronze/copper primary */
+    --primary: 25 65% 35%;
+    --primary-foreground: 35 15% 96%;
+    --primary-glow: 30 70% 50%;
+
+    /* Warm stone secondary */
+    --secondary: 35 20% 88%;
+    --secondary-foreground: 25 30% 25%;
+
+    /* Subtle muted tones */
+    --muted: 35 15% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Warm accent */
+    --accent: 30 35% 85%;
+    --accent-foreground: 25 30% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 15% 96%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 25 65% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom design tokens for elegant sculptor site */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--accent)) 100%);
+    
+    /* Elegant shadows */
+    --shadow-elegant: 0 20px 60px -10px hsl(var(--primary) / 0.15);
+    --shadow-subtle: 0 4px 20px -4px hsl(var(--primary) / 0.08);
+    
+    /* Typography scale */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --sidebar-background: 35 25% 98%;
+    --sidebar-foreground: 25 20% 15%;
+    --sidebar-primary: 25 65% 35%;
+    --sidebar-primary-foreground: 35 15% 96%;
+    --sidebar-accent: 35 20% 88%;
+    --sidebar-accent-foreground: 25 30% 25%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 25 65% 35%;
+  }
+
+  .dark {
+    /* Dark mode with warm earthy tones */
+    --background: 25 15% 8%;
+    --foreground: 35 15% 92%;
+
+    --card: 25 20% 12%;
+    --card-foreground: 35 15% 92%;
+
+    --popover: 25 20% 12%;
+    --popover-foreground: 35 15% 92%;
+
+    --primary: 30 70% 55%;
+    --primary-foreground: 25 15% 8%;
+    --primary-glow: 30 65% 45%;
+
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 35 15% 92%;
+
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 10% 65%;
+
+    --accent: 25 20% 22%;
+    --accent-foreground: 35 15% 92%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 35 15% 92%;
+
+    --border: 25 15% 18%;
+    --input: 25 15% 18%;
+    --ring: 30 70% 55%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--accent)) 100%);
+    
+    --sidebar-background: 25 20% 12%;
+    --sidebar-foreground: 35 15% 92%;
+    --sidebar-primary: 30 70% 55%;
+    --sidebar-primary-foreground: 25 15% 8%;
+    --sidebar-accent: 25 15% 18%;
+    --sidebar-accent-foreground: 35 15% 92%;
+    --sidebar-border: 25 15% 18%;
+    --sidebar-ring: 30 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .hero-text {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+  
+  .elegant-shadow {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .subtle-shadow {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+}
