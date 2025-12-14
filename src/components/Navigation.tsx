@@ -15,6 +15,7 @@ export function Navigation() {
     { key: 'nav.biography', href: '/biography' },
     { key: 'nav.gallery', href: '#gallery' },
     { key: 'nav.about', href: '#about' },
+    { key: 'nav.workshop', href: '#workshop' },
     { key: 'nav.contact', href: '#contact' }
   ];
 

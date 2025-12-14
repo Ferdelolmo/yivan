@@ -16,6 +16,7 @@ const translations = {
       gallery: 'Galería',
       biography: 'Biografía',
       about: 'Sobre el Artista',
+      workshop: 'Taller',
       contact: 'Contacto'
     },
     hero: {
@@ -149,6 +150,7 @@ const translations = {
       gallery: 'Gallery',
       biography: 'Biography',
       about: 'About the Artist',
+      workshop: 'Workshop',
       contact: 'Contact'
     },
     hero: {
@@ -282,6 +284,7 @@ const translations = {
       gallery: 'Galerie',
       biography: 'Biographie',
       about: 'À propos de l\'Artiste',
+      workshop: 'Atelier',
       contact: 'Contact'
     },
     hero: {
@@ -415,6 +418,7 @@ const translations = {
       gallery: 'Галерея',
       biography: 'Биография',
       about: 'О Художнике',
+      workshop: 'Мастерская',
       contact: 'Контакты'
     },
     hero: {
