@@ -14,7 +14,7 @@ export function HeroSection() {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-[center_65%] bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-[center_75%] bg-no-repeat"
         style={{ backgroundImage: 'url("https://i.imgur.com/ZOpK0kD.jpeg")' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/0 to-background/90" />

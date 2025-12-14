@@ -130,10 +130,14 @@ const translations = {
     },
     contact: {
       title: 'Contacto',
-      email: 'correo@ivangomezaparicio.com',
+      email: '@hola@ivangomezaparicio.com',
       phone: '+34 xxx xxx xxx',
       exhibition: 'Próximas Exposiciones',
       available: 'Obra disponible bajo encargo',
+    },
+    workshop: {
+      title: 'Taller',
+      text: 'En el corazón de Gallegos de Altamiros se encuentra el taller de Iván Gómez Aparicio, un espacio dedicado a la creación de escultura contemporánea donde el artista transforma materiales nobles mediante técnicas innovadoras en obras que exploran la intersección entre forma, materia y emoción humana. Funcionando como un laboratorio vivo, cada pieza surge de un diálogo profundo entre concepto e intuición, combinando tradición escultórica con procesos meticulosos para reflejar una visión única y atemporal. Situado en esta localidad, el taller invita a visitantes interesados a contactar para coordinar visitas y descubrir de cerca el epicentro de su producción artística.'
     },
     common: {
       back: 'Volver al Inicio'
@@ -264,6 +268,10 @@ const translations = {
       exhibition: 'Upcoming Exhibitions',
       available: 'Custom work available by commission',
     },
+    workshop: {
+      title: 'Workshop',
+      text: 'Nestled in the heart of Gallegos de Altamiros is the workshop of Iván Gómez Aparicio, a space dedicated to the creation of contemporary sculpture where the artist transforms noble materials through innovative techniques into works that explore the intersection between form, matter, and human emotion. Functioning as a living laboratory, each piece emerges from a profound dialogue between concept and intuition, combining sculptural tradition with meticulous processes to reflect a unique and timeless vision. Located in this locality, the workshop invites interested visitors to contact for coordinating visits and discovering up close the epicenter of his artistic production.'
+    },
     common: {
       back: 'Back to Home'
     }
@@ -393,6 +401,10 @@ const translations = {
       exhibition: 'Prochaines Expositions',
       available: 'Œuvres sur commande disponibles',
     },
+    workshop: {
+      title: 'Atelier',
+      text: 'Au cœur de Gallegos de Altamiros se trouve l\'atelier d\'Iván Gómez Aparicio, un espace dédié à la création de sculpture contemporaine où l\'artiste transforme des matériaux nobles par des techniques innovantes en œuvres explorant l\'intersection entre forme, matière et émotion humaine. Fonctionnant comme un laboratoire vivant, chaque pièce naît d\'un dialogue profond entre concept et intuition, combinant tradition sculpturale et processus méticuleux pour refléter une vision unique et intemporelle. Situé dans cette localité, l\'atelier invite les visiteurs intéressés à contacter pour coordonner des visites et découvrir de près l\'épicentre de sa production artistique.'
+    },
     common: {
       back: 'Retour à l\'accueil'
     }
@@ -521,6 +533,10 @@ const translations = {
       phone: '+34 xxx xxx xxx',
       exhibition: 'Предстоящие Выставки',
       available: 'Работы на заказ доступны',
+    },
+    workshop: {
+      title: 'Мастерская',
+      text: 'В сердце Галлегос-де-Альтамирос расположена мастерская Ивана Гомеса Апарисио — пространство, посвященное созданию современной скульптуры, где художник превращает благородные материалы с помощью инновационных техник в произведения, исследующие пересечение формы, материи и человеческой эмоции. Функционируя как живая лаборатория, каждая работа рождается из глубокого диалога между концепцией и интуицией, сочетая скульптурную традицию с тщательными процессами, чтобы отразить уникальное и вневременное видение. Расположенная в этом населенном пункте, мастерская приглашает заинтересованных посетителей связаться для координации визитов и близкого знакомства с эпицентром его художественного производства.'
     },
     common: {
       back: 'Вернуться на главную'

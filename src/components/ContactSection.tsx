@@ -1,7 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/hooks/useLanguage';
-import { Mail, Phone, Calendar, Palette } from 'lucide-react';
+import { Mail, Instagram, Calendar, Palette } from 'lucide-react';
 
 export function ContactSection() {
   const { t } = useLanguage();
@@ -9,15 +9,15 @@ export function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: t('contact.email'),
-      href: `mailto:${t('contact.email')}`
+      label: '',
+      value: 'hola@ivangomezaparicio.com',
+      href: 'mailto:hola@ivangomezaparicio.com'
     },
     {
-      icon: Phone,
-      label: 'Teléfono',
-      value: t('contact.phone'),
-      href: `tel:${t('contact.phone')}`
+      icon: Instagram,
+      label: '',
+      value: '@ivangomezescultor',
+      href: `https://www.instagram.com/ivangomezescultor`
     }
   ];
 
@@ -92,7 +92,7 @@ export function ContactSection() {
             <Button
               size="lg"
               className="elegant-shadow hover:shadow-lg transition-all duration-300 text-lg px-8 py-6"
-              onClick={() => window.location.href = `mailto:${t('contact.email')}`}
+              onClick={() => window.location.href = 'mailto:hola@ivangomezaparicio.com'}
             >
               Iniciar Conversación
             </Button>

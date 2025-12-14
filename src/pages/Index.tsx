@@ -2,6 +2,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { GallerySection } from '@/components/GallerySection';
 import { AboutSection } from '@/components/AboutSection';
+import { WorkshopSection } from '@/components/WorkshopSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 
@@ -13,6 +14,7 @@ const Index = () => {
         <HeroSection />
         <GallerySection />
         <AboutSection />
+        <WorkshopSection />
         <ContactSection />
       </main>
       <Footer />
