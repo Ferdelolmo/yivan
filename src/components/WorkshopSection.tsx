@@ -15,7 +15,7 @@ export function WorkshopSection() {
                         <div className="relative w-full max-w-[350px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl bg-muted border border-border/50 group">
                             {/* Fallback/Placeholder content until video is provided */}
                             <video
-                                src="/media/gallegos.mp4"
+                                src={`${import.meta.env.BASE_URL}media/gallegos.mp4`}
                                 className="w-full h-full object-cover"
                                 autoPlay
                                 loop

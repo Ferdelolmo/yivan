@@ -128,7 +128,7 @@ const Biography = () => {
           <div className="mb-16 flex justify-center">
             <div className="rounded-xl overflow-hidden bg-muted aspect-[9/16] w-full max-w-[400px] border border-border/50 shadow-lg group relative">
               <video
-                src="/media/video_ivan.mp4"
+                src={`${import.meta.env.BASE_URL}media/video_ivan.mp4`}
                 className="w-full h-full object-cover"
                 autoPlay
                 loop
